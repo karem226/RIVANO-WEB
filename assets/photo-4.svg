@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900">
+<defs><linearGradient id="g4" x1="0" x2="1"><stop offset="0" stop-color="#f6f6f5"/><stop offset="1" stop-color="#e8eaf0"/></linearGradient></defs>
+<rect width="100%" height="100%" fill="url(#g4)"/>
+<g transform="translate(60,120)" fill="#0b2340" font-family="Arial, Helvetica, sans-serif">
+  <text x="0" y="0" font-size="44">Rivano Project #4</text>
+  <text x="0" y="48" font-size="22" fill="#6b7280">Interior design preview</text>
+</g>
+</svg>

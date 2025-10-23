@@ -1,0 +1,19 @@
+{
+  "name": "rivano-pro-final",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Rivano Pro Final \u2014 polished React + Vite project with interactions and lightbox",
+  "scripts": {
+    "start": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.14.1"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0"
+  }
+}
