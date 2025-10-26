@@ -326,10 +326,11 @@ body {
   gap: 14px;
   margin: 28px 0;
 }
+
 .thumb {
   cursor: pointer;
   border-radius: 12px;
-  overflow: hidden;
+  overflow: none;
   box-shadow: 0 8px 30px rgba(11, 35, 64, 0.06);
   background: #fff;
   transition: transform 0.28s ease;
@@ -357,7 +358,7 @@ body {
   height: 260px;
   object-fit: cover;
   border-radius: 10px;
-  display: block;
+  display:  block;
 }
 
 /* Contact & form */
@@ -443,7 +444,7 @@ body {
   }
 }
 .hero-media img {
-  border-radius: 16px;
+  border-radius: 20px;
   box-shadow: var(--shadow);
   animation: floaty 6s ease-in-out infinite alternate;
 }
@@ -486,7 +487,7 @@ a:focus {
 }
 
 .hero img {
-  width: 170%;
+  width: 180%;
   height: auto;
   display: block;
   margin: 0 auto;
@@ -823,6 +824,9 @@ a:focus {
   .container form {
     width: 80%;
   }
+  .hero img {
+    max-width: 170%;
+  }
 }
 
 /* الشاشات الكبيرة (أكبر من 1200px) */
@@ -837,7 +841,7 @@ a:focus {
   }
 
   .hero img {
-    max-width: 160%;
+    max-width: 180%;
   }
 
   .container form {
