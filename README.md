@@ -4,6 +4,7 @@ Run:
 
 npm install
 npm run start
+npm run start -- --host
 
 Open http://localhost:5173
 
