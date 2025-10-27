@@ -6,33 +6,33 @@ export default function Portfolio() {
   const projects = [
     {
       title: "Modern Office Design",
-      image: "/images/portfolio1.jpg",
+      image: "/assets/portfolio1.JPG",
       gallery: [
-        "/images/office1.jpg",
-        "/images/office2.jpg",
-        "/images/office3.jpg",
+        "/assets/office1.PNG",
+        "/assets/photo-3.JPG",
+        "/assets/office3.JPG",
       ],
       description:
         "A modern and functional office space with sleek furniture and ambient lighting designed for productivity.",
     },
     {
       title: "Luxury Villa Interior",
-      image: "/images/portfolio2.jpg",
+      image: "/assets/portfolio2.JPG",
       gallery: [
-        "/images/villa1.jpg",
-        "/images/villa2.jpg",
-        "/images/villa3.jpg",
+        "/assets/villa1.JPG",
+        "/assets/villa2.JPG",
+        "/assets/villa3.jpg",
       ],
       description:
         "Luxury villa featuring elegant interiors, warm tones, and high-end materials for a timeless atmosphere.",
     },
     {
       title: "Minimal Apartment",
-      image: "/images/portfolio3.jpg",
+      image: "/assets/portfolio3.JPG",
       gallery: [
-        "/images/apartment1.jpg",
-        "/images/apartment2.jpg",
-        "/images/apartment3.jpg",
+        "/assets/apartment1.jpg",
+        "/assets/apartment2.jpg",
+        "/assets/apartment3.jpg",
       ],
       description:
         "A minimal apartment design focused on light, space, and simplicity, with neutral tones and natural finishes.",

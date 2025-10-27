@@ -47,7 +47,6 @@ body {
   background-color: #fff !important; /* يبقى أبيض دائمًا */
 }
 
-
 /* مسافة بين النصوص والمربعات */
 .container form label {
   display: flex;
@@ -80,7 +79,6 @@ body {
 .container input:hover,
 .container textarea:hover {
   background-color: #fff;
- 
 }
 
 .container button,
@@ -323,7 +321,7 @@ body {
 .gallery-preview {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 14px;
+  gap: 17px;
   margin: 28px 0;
 }
 
@@ -358,7 +356,8 @@ body {
   height: 260px;
   object-fit: cover;
   border-radius: 10px;
-  display:  block;
+  transition: transform 0.3s ease;
+  margin: 8px;
 }
 
 /* Contact & form */
@@ -414,8 +413,8 @@ body {
   align-items: center;
 }
 .lightbox .lb-img {
-  max-width: 100%;
-  border-radius: 10px;
+  max-width: 80%;
+  border-radius: 13px;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
 }
 .lightbox .lb-caption {
@@ -590,12 +589,11 @@ a:focus {
 
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); 
+  grid-template-columns: repeat(3, 1fr);
   gap: 25px;
   margin-top: 40px;
   justify-items: center;
 }
-
 
 .portfolio-item {
   cursor: pointer;
@@ -604,7 +602,7 @@ a:focus {
 
 .portfolio-item img {
   width: 100%;
-  height: 250px;
+  height: 300px;
   object-fit: cover;
   border-radius: 10px;
   transition: all 0.3s ease;
@@ -729,7 +727,9 @@ a:focus {
     font-size: 14px;
   }
 
-  h1, h2, h3 {
+  h1,
+  h2,
+  h3 {
     font-size: 1.2rem;
   }
 
@@ -777,7 +777,9 @@ a:focus {
     font-size: 15px;
   }
 
-  h1, h2, h3 {
+  h1,
+  h2,
+  h3 {
     font-size: 1.4rem;
   }
 
@@ -849,7 +851,6 @@ a:focus {
   }
 }
 
-
 /* ===============================
    ✨ FLUID TYPOGRAPHY SYSTEM
    =============================== */
@@ -874,10 +875,14 @@ h3 {
   font-size: clamp(1.2rem, 2.5vw, 1.8rem);
 }
 
-p, li, span, input, textarea, button {
+p,
+li,
+span,
+input,
+textarea,
+button {
   font-size: clamp(0.9rem, 1.3vw, 1.1rem);
 }
-
 
 /* ===============================
    🧭 FLUID SPACING SYSTEM
@@ -906,7 +911,10 @@ section {
   margin-bottom: var(--space-md);
 }
 
-h1, h2, h3, p {
+h1,
+h2,
+h3,
+p {
   margin-bottom: var(--space-sm);
 }
 
@@ -919,7 +927,6 @@ button {
 .portfolio-gallery {
   gap: var(--space-md);
 }
-
 
 /* ===============================
    🧩 FLUID LAYOUT GRID SYSTEM
@@ -970,7 +977,6 @@ button {
   justify-content: center;
 }
 
-
 /* ===== NAVBAR FIX ===== */
 .navbar {
   display: flex;
@@ -1018,4 +1024,62 @@ button {
   }
 }
 
+.gallery-thumb {
+  max-width: 250px;
+  width: 100%;
+  height: auto;
+  gap: 500px;
+  cursor: pointer;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: center;
+}
 
+.thumb-image-wrapper {
+  width: 100%;
+  aspect-ratio: 16/12;
+  overflow: hidden;
+}
+
+.thumb-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.thumb-caption {
+  padding: 10px;
+  color: #002147;
+  font-weight: 600;
+}
+
+.lightbox-content {
+  position: relative;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 70vm; /* ← تصغير الحجم */
+  max-height: auto; /* ← تصغير الحجم */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  overflow: hidden;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.4);
+}
+
+.lightbox-content img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.gallery-thumb {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-thumb:hover {
+  transform: translateY(-8px); /* يرتفع للأعلى */
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15); /* شادو جميل */
+  cursor: pointer;
+}

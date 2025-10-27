@@ -1,33 +1,47 @@
-import React, {useState, useEffect, useRef} from 'react';
+// src/sections/GalleryFull.jsx
+import React, { useState, useEffect } from 'react';
 
-const items = [
-  {id:1,title:'Modern Apartment',src:'/assets/photo-1.svg'},
-  {id:2,title:'Cozy Living Room',src:'/assets/photo-2.svg'},
-  {id:3,title:'Office Renovation',src:'/assets/photo-3.JPG'},
-  {id:4,title:'Luxury Villa',src:'/assets/photo-4.svg'},
-  {id:5,title:'Minimal Kitchen',src:'/assets/photo-5.svg'}
-];
+export function GalleryThumb({ id, title, src }) {
+  const openLightbox = () => {
+    const event = new CustomEvent("openLightbox", {
+      detail: { id, src, title }
+    });
+    window.dispatchEvent(event);
+  };
 
-export function GalleryThumb({id,title,src}){
-  function openLightbox(e) {
-    const ev = new CustomEvent('openLightbox', { detail: { id, src, title } });
-    window.dispatchEvent(ev);
-  }
   return (
-    <figure className="thumb" onClick={openLightbox} tabIndex={0} onKeyDown={(e)=>{ if(e.key==='Enter') openLightbox(); }}>
-      <img data-src={src} alt={title} loading="lazy" className="lazy" />
-      <figcaption>{title}</figcaption>
+    <figure className="gallery-thumb" onClick={openLightbox}>
+      <div className="thumb-image-wrapper">
+        <img className="thumb-image" src={src} alt={title} loading="lazy" />
+      </div>
+      <figcaption className="thumb-caption">{title}</figcaption>
     </figure>
   );
 }
 
-export function Gallery(){ 
+export default function GalleryFull() {
+  const [lightboxData, setLightboxData] = useState(null);
+
+  useEffect(() => {
+    const openLightbox = (e) => setLightboxData(e.detail);
+    window.addEventListener("openLightbox", openLightbox);
+
+    return () => window.removeEventListener("openLightbox", openLightbox);
+  }, []);
+
+  const closeLightbox = () => setLightboxData(null);
+
   return (
-    <div className="gallery-grid">
-      {items.map(i=> <figure key={i.id} className="showcase-card"><img src={i.src} alt={i.title} /><figcaption>{i.title}</figcaption></figure>)}
-    </div>
+    <>
+      {lightboxData && (
+        <div className="lightbox" onClick={closeLightbox}>
+          <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
+            <img src={lightboxData.src} alt={lightboxData.title} />
+            <p>{lightboxData.title}</p>
+            <button className="close-btn" onClick={closeLightbox}>X</button>
+          </div>
+        </div>
+      )}
+    </>
   );
 }
-
-// Lightbox component mounted by script in index: listens to 'openLightbox' event and shows modal.
-// We'll provide a small script file to handle lightbox and lazy-loading.

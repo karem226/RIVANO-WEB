@@ -17,7 +17,7 @@ export default function Hero(){
           </div>
         </div>
         <div className="hero-media">
-          <img src="/assets/ppppp.png" alt="Living room" loading="eager" />
+          <img src="/assets/main.png" alt="Living room" loading="eager" />
         </div>
       </div>
     </section>
