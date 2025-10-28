@@ -635,14 +635,15 @@ a:focus {
 
 .portfolio-modal-content {
   background: #fff;
-  padding: 25px;
+  padding: 30px;
   border-radius: 12px;
-  max-width: 800px;
-  width: 90%;
+  max-width: 900px;
+  width: 150%;
   text-align: center;
   position: relative;
   animation: fadeIn 0.3s ease;
 }
+
 
 /* التنقل بين المشاريع */
 .nav-btn {
@@ -683,7 +684,7 @@ a:focus {
 }
 
 .portfolio-gallery img {
-  width: 30%;
+  width: 100%;
   border-radius: 8px;
 }
 

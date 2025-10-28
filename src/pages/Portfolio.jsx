@@ -39,20 +39,20 @@ export default function Portfolio() {
     },
     {
       title: "Retail Store Concept",
-      image: "/images/portfolio4.jpg",
+      image: "/assets/portfolio4.jpg",
       gallery: [
-        "/images/store1.jpg",
-        "/images/store2.jpg",
-        "/images/store3.jpg",
+        "/assets/store1.jpg",
+        "/assets/store2.jpg",
+        "/assets/store3.jpg",
       ],
       description:
         "Concept retail store designed to enhance product visibility and create a seamless shopping experience.",
     },
     {
       title: "Cozy Café Design",
-      image: "/images/portfolio5.jpg",
+      image: "/assets/portfolio5.jpg",
       gallery: [
-        "/images/cafe1.jpg",
+        "/assets/cafe1.jpg",
         "/images/cafe2.jpg",
         "/images/cafe3.jpg",
       ],
@@ -61,11 +61,11 @@ export default function Portfolio() {
     },
     {
       title: "Art Gallery Space",
-      image: "/images/portfolio6.jpg",
+      image: "/assets/portfolio6.jpg",
       gallery: [
-        "/images/gallery1.jpg",
-        "/images/gallery2.jpg",
-        "/images/gallery3.jpg",
+        "/assets/gallery1.jpg",
+        "/assets/gallery2.jpg",
+        "/assets/gallery3.jpg",
       ],
       description:
         "A contemporary art gallery emphasizing minimal architecture and versatile lighting for showcasing artworks.",
